@@ -1,5 +1,6 @@
 import { SafeAreaView, StyleSheet, Text, View } from 'react-native'
 import Title from '../components/Title'
+import { useState } from 'react'
 
 const generateNumberBetween = (min, max, exclude) => {
 	const rndNum = Math.floor(Math.random() * (max - min)) + min
@@ -12,6 +13,8 @@ const generateNumberBetween = (min, max, exclude) => {
 }
 
 const GameScreen = () => {
+	const [currentGuess, setCurrentGuess] = useState()
+
 	return (
 		<SafeAreaView style={styles.screen}>
 			<Title>Opponent's Guess</Title>
