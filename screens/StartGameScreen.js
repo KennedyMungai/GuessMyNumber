@@ -11,7 +11,14 @@ const StartGameScreen = () => {
 		setEnteredNumber(enteredText)
 	}
 
-	const confirmInputHandler = () => {}
+	const confirmInputHandler = () => {
+		const chosenNumber = parseInt(enteredNumber)
+
+		if (isNaN(chosenNumber) || chosenNumber <= 0 || chosenNumber > 99) {
+			// TODO Toaster Alert
+			return
+		}
+	}
 
 	return (
 		<View style={styles.startGameView}>
