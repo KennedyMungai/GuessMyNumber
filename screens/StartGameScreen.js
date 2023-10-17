@@ -7,6 +7,10 @@ import { useState } from 'react'
 const StartGameScreen = () => {
 	const [enteredNumber, setEnteredNumber] = useState('')
 
+	const numberInputHandler = (enteredText) => {
+		setEnteredNumber(enteredText)
+	}
+
 	return (
 		<View style={styles.startGameView}>
 			<View>
@@ -16,6 +20,7 @@ const StartGameScreen = () => {
 					keyboardType='number-pad'
 					maxLength={2}
 					value={enteredNumber}
+					onChangeText={numberInputHandler}
 				/>
 			</View>
 			<View style={styles.secondInnerView}>
