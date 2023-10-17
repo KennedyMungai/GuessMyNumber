@@ -1,8 +1,7 @@
-import { StyleSheet } from 'react-native'
-import StartGameScreen from './screens/StartGameScreen'
 import { LinearGradient } from 'expo-linear-gradient'
-import { ImageBackground } from 'react-native'
 import { useState } from 'react'
+import { ImageBackground, StyleSheet } from 'react-native'
+import StartGameScreen from './screens/StartGameScreen'
 
 export default function App() {
 	const [userNumber, setUserNumber] = useState()
