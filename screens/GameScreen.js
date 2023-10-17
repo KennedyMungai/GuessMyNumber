@@ -13,6 +13,8 @@ const generateNumberBetween = (min, max, exclude) => {
 }
 
 const GameScreen = () => {
+	const initialGuess = generateNumberBetween(1, 100, userNumber)
+
 	const [currentGuess, setCurrentGuess] = useState()
 
 	return (
