@@ -17,12 +17,12 @@ export default StartGameScreen
 
 const styles = StyleSheet.create({
 	startGameView: {
-		flex: 1,
-		flexDirection: 'column',
+		flexDirection: 'row',
 		justifyContent: 'center',
 		alignItems: 'center',
 		gap: 10,
 		padding: 16,
-		backgroundColor: '#E9C46A'
+		backgroundColor: '#E9C46A',
+		margin: 10
 	}
 })
