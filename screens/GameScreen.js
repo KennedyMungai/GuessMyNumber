@@ -4,7 +4,7 @@ import { Text, View, StyleSheet } from 'react-native'
 const GameScreen = () => {
 	return (
 		<SafeAreaView style={styles.screen}>
-			<Text>Opponent's Guess</Text>
+			<Text style={styles.title}>Opponent's Guess</Text>
 			{/* TODO: Guess */}
 			<View>
 				<Text>Higher or Lower?</Text>
@@ -22,5 +22,10 @@ const styles = StyleSheet.create({
 		flex: 1,
 		padding: 12,
 		marginTop: 40
+	},
+	title: {
+		fontSize: 24,
+		fontWeight: 'bold',
+		color: 'white'
 	}
 })
