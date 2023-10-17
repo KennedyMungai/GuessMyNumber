@@ -12,10 +12,10 @@ const generateNumberBetween = (min, max, exclude) => {
 	}
 }
 
-const GameScreen = () => {
+const GameScreen = ({ userNumber }) => {
 	const initialGuess = generateNumberBetween(1, 100, userNumber)
 
-	const [currentGuess, setCurrentGuess] = useState()
+	const [currentGuess, setCurrentGuess] = useState(initialGuess)
 
 	return (
 		<SafeAreaView style={styles.screen}>
