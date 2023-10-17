@@ -1,6 +1,7 @@
 import { SafeAreaView, StyleSheet, Text, View } from 'react-native'
 import Title from '../components/ui/Title'
 import { useState } from 'react'
+import NumberContainer from '../components/game/NumberContainer'
 
 const generateNumberBetween = (min, max, exclude) => {
 	const rndNum = Math.floor(Math.random() * (max - min)) + min
@@ -20,6 +21,7 @@ const GameScreen = ({ userNumber }) => {
 	return (
 		<SafeAreaView style={styles.screen}>
 			<Title>Opponent's Guess</Title>
+			<NumberContainer>{currentGuess}</NumberContainer>
 			<Text></Text>
 			<View>
 				<Text>Higher or Lower?</Text>
