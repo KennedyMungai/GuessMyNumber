@@ -15,6 +15,7 @@ const StartGameScreen = () => {
 					placeholder='Guess'
 					keyboardType='number-pad'
 					maxLength={2}
+					value={enteredNumber}
 				/>
 			</View>
 			<View style={styles.secondInnerView}>
