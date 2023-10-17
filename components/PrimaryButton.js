@@ -26,7 +26,8 @@ const styles = StyleSheet.create({
 		borderRadius: 5,
 		backgroundColor: '#F4A261',
 		color: 'white',
-		elevation: 2
+		elevation: 2,
+		width: 150
 	},
 	buttonText: {
 		color: 'white',
