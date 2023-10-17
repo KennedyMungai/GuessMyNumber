@@ -14,9 +14,7 @@ export default function App() {
 				resizeMode='cover'
 				imageStyle={styles.rootImageBackground}
 				style={{
-					flex: 1,
-					justifyContent: 'center',
-					alignItems: 'center'
+					flex: 1
 				}}
 			>
 				<StartGameScreen />
