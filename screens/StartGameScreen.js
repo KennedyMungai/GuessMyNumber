@@ -11,6 +11,8 @@ const StartGameScreen = () => {
 		setEnteredNumber(enteredText)
 	}
 
+	const confirmInputHandler = () => {}
+
 	return (
 		<View style={styles.startGameView}>
 			<View>
