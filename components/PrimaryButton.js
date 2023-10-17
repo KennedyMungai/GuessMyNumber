@@ -8,7 +8,7 @@ const PrimaryButton = ({ children }) => {
 	return (
 		<Pressable onPress={onPressHandler} style={styles.buttonView}>
 			<View>
-				<Text>{children}</Text>
+				<Text style={styles.buttonText}>{children}</Text>
 			</View>
 		</Pressable>
 	)
@@ -20,8 +20,12 @@ const styles = StyleSheet.create({
 	buttonView: {
 		padding: 10,
 		borderRadius: 5,
-		backgroundColor: '#E76F51',
+		backgroundColor: '#F4A261',
 		color: 'white',
 		elevation: 2
+	},
+	buttonText: {
+		color: 'white',
+		textAlign: 'center'
 	}
 })
