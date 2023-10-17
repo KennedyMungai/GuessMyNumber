@@ -45,7 +45,8 @@ const styles = StyleSheet.create({
 		borderBottomColor: '#264653',
 		fontWeight: 'bold',
 		marginVertical: 8,
-		textAlign: 'center'
+		textAlign: 'center',
+		width: 100
 	},
 	firstInnerView: {},
 	secondInnerView: {
