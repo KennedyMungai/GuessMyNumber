@@ -8,7 +8,7 @@ const StartGameScreen = () => {
 		<View style={styles.startGameView}>
 			<TextInput
 				style={styles.startGameInput}
-				placeholder='Enter Number'
+				placeholder='Guess'
 				keyboardType='number-pad'
 				maxLength={2}
 			/>
