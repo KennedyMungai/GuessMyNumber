@@ -18,7 +18,10 @@ export default PrimaryButton
 
 const styles = StyleSheet.create({
 	buttonView: {
-		padding: 5,
-		borderRadius: 5
+		padding: 10,
+		borderRadius: 5,
+		backgroundColor: '#E76F51',
+		color: 'white',
+		elevation: 2
 	}
 })
