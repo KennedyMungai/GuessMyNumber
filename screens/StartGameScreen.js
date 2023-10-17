@@ -27,6 +27,9 @@ const StartGameScreen = () => {
 			])
 			return
 		}
+
+		// TODO: Add the logic to move to the next game screen
+		console.log('Valid Number')
 	}
 
 	return (
