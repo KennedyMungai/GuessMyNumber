@@ -6,7 +6,11 @@ const PrimaryButton = ({ children }) => {
 	}
 
 	return (
-		<Pressable onPress={onPressHandler} style={styles.buttonView}>
+		<Pressable
+			onPress={onPressHandler}
+			style={styles.buttonView}
+			android_ripple={{ color: '#640233' }}
+		>
 			<View>
 				<Text style={styles.buttonText}>{children}</Text>
 			</View>
