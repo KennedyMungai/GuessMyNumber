@@ -5,7 +5,7 @@ import { ImageBackground } from 'react-native'
 import { useState } from 'react'
 
 export default function App() {
-	const [userNumber, setUserNumber] = useState('')
+	const [userNumber, setUserNumber] = useState()
 
 	return (
 		<LinearGradient
