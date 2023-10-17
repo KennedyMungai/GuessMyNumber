@@ -6,7 +6,12 @@ import { StyleSheet } from 'react-native'
 const StartGameScreen = () => {
 	return (
 		<View style={styles.startGameView}>
-			<TextInput />
+			<TextInput
+				style={styles.startGameInput}
+				placeholder='Enter Number'
+				keyboardType='number-pad'
+				maxLength={2}
+			/>
 			<PrimaryButton>Reset</PrimaryButton>
 			<PrimaryButton>Confirm</PrimaryButton>
 		</View>
@@ -18,7 +23,7 @@ export default StartGameScreen
 const styles = StyleSheet.create({
 	startGameView: {
 		flexDirection: 'row',
-		justifyContent: 'center',
+		justifyContent: 'space-around',
 		alignItems: 'center',
 		gap: 10,
 		padding: 16,
@@ -29,5 +34,11 @@ const styles = StyleSheet.create({
 		shadowColor: 'black',
 		shadowOffset: { width: 4, height: 4 },
 		shadowRadius: 6
+	},
+	startGameInput: {
+		borderWidth: 1,
+		borderRadius: 5,
+		padding: 5,
+		borderColor: '#264653'
 	}
 })
