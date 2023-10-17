@@ -14,7 +14,9 @@ const StartGameScreen = () => {
 		const chosenNumber = parseInt(enteredNumber)
 
 		if (isNaN(chosenNumber) || chosenNumber <= 0 || chosenNumber > 99) {
-			Alert.alert('Error', 'Invalid number entered. Please try again')
+			Alert.alert('Error', 'Invalid number entered. Please try again', [
+				{ text: 'Okay', style: 'destructive' }
+			])
 			return
 		}
 	}
