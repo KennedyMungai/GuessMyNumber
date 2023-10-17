@@ -1,5 +1,5 @@
 import { SafeAreaView, StyleSheet, Text, View } from 'react-native'
-import Title from '../components/Title'
+import Title from '../components/ui/Title'
 import { useState } from 'react'
 
 const generateNumberBetween = (min, max, exclude) => {
@@ -20,7 +20,7 @@ const GameScreen = ({ userNumber }) => {
 	return (
 		<SafeAreaView style={styles.screen}>
 			<Title>Opponent's Guess</Title>
-			{/* TODO: Guess */}
+			<Text></Text>
 			<View>
 				<Text>Higher or Lower?</Text>
 				{/* TODO: Plus and Minus button to show if higher or lower */}
