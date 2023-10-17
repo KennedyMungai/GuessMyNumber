@@ -4,7 +4,10 @@ import { LinearGradient } from 'expo-linear-gradient'
 
 export default function App() {
 	return (
-		<LinearGradient style={styles.rootScreen}>
+		<LinearGradient
+			colors={['#E76F51', '#F4A261', '#E9C46A']}
+			style={styles.rootScreen}
+		>
 			<StartGameScreen />
 		</LinearGradient>
 	)
@@ -12,6 +15,7 @@ export default function App() {
 
 const styles = StyleSheet.create({
 	rootScreen: {
-		flex: 1
+		flex: 1,
+		justifyContent: 'center'
 	}
 })
