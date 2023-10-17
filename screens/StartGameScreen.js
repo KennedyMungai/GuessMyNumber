@@ -36,7 +36,7 @@ const styles = StyleSheet.create({
 		shadowRadius: 6
 	},
 	startGameInput: {
-		borderBottomWidth: 1,
+		borderBottomWidth: 2,
 		padding: 5,
 		borderBottomColor: '#264653'
 	}
