@@ -5,7 +5,7 @@ import { LinearGradient } from 'expo-linear-gradient'
 export default function App() {
 	return (
 		<LinearGradient
-			colors={['#E76F51', '#F4A261', '#E9C46A']}
+			colors={['#E76F51', '#FF8855', '#E9C46A']}
 			style={styles.rootScreen}
 		>
 			<StartGameScreen />
