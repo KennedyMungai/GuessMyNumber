@@ -6,6 +6,10 @@ import StartGameScreen from './screens/StartGameScreen'
 export default function App() {
 	const [userNumber, setUserNumber] = useState()
 
+	const startGameHandler = (pickedNumber) => {
+		setUserNumber(pickedNumber)
+	}
+
 	return (
 		<LinearGradient
 			colors={['#ff4653', '#2A9D8F']}
