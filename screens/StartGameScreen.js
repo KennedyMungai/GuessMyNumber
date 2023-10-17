@@ -23,6 +23,7 @@ const styles = StyleSheet.create({
 		gap: 10,
 		padding: 16,
 		backgroundColor: '#E9C46A',
-		margin: 10
+		margin: 10,
+		borderRadius: 10
 	}
 })
