@@ -2,7 +2,6 @@ import { StyleSheet } from 'react-native'
 import StartGameScreen from './screens/StartGameScreen'
 import { LinearGradient } from 'expo-linear-gradient'
 import { ImageBackground } from 'react-native'
-import { StatusBar } from 'react-native'
 
 export default function App() {
 	return (
@@ -32,6 +31,6 @@ const styles = StyleSheet.create({
 		justifyContent: 'center'
 	},
 	rootImageBackground: {
-		opacity: 0.5
+		opacity: 0.75
 	}
 })
