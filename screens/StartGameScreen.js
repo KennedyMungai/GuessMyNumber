@@ -38,6 +38,9 @@ const styles = StyleSheet.create({
 	startGameInput: {
 		borderBottomWidth: 2,
 		padding: 5,
-		borderBottomColor: '#264653'
+		borderBottomColor: '#264653',
+		fontWeight: 'bold',
+		marginVertical: 8,
+		textAlign: 'center'
 	}
 })
