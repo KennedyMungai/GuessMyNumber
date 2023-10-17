@@ -6,7 +6,7 @@ import { ImageBackground } from 'react-native'
 export default function App() {
 	return (
 		<LinearGradient
-			colors={['#264653', '#2A9D8F']}
+			colors={['#ff4653', '#2A9D8F']}
 			style={styles.rootScreen}
 		>
 			<ImageBackground
