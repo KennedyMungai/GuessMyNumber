@@ -6,14 +6,18 @@ import { StyleSheet } from 'react-native'
 const StartGameScreen = () => {
 	return (
 		<View style={styles.startGameView}>
-			<TextInput
-				style={styles.startGameInput}
-				placeholder='Guess'
-				keyboardType='number-pad'
-				maxLength={2}
-			/>
-			<PrimaryButton>Reset</PrimaryButton>
-			<PrimaryButton>Confirm</PrimaryButton>
+			<View>
+				<TextInput
+					style={styles.startGameInput}
+					placeholder='Guess'
+					keyboardType='number-pad'
+					maxLength={2}
+				/>
+			</View>
+			<View style={styles.secondInnerView}>
+				<PrimaryButton>Reset</PrimaryButton>
+				<PrimaryButton>Confirm</PrimaryButton>
+			</View>
 		</View>
 	)
 }
@@ -22,7 +26,7 @@ export default StartGameScreen
 
 const styles = StyleSheet.create({
 	startGameView: {
-		flexDirection: 'row',
+		flexDirection: 'column',
 		justifyContent: 'space-around',
 		alignItems: 'center',
 		gap: 10,
@@ -42,5 +46,11 @@ const styles = StyleSheet.create({
 		fontWeight: 'bold',
 		marginVertical: 8,
 		textAlign: 'center'
+	},
+	firstInnerView: {},
+	secondInnerView: {
+		flexDirection: 'row',
+		justifyContent: 'space-around',
+		gap: 20
 	}
 })
