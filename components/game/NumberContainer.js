@@ -18,7 +18,8 @@ const styles = StyleSheet.create({
 		padding: 24,
 		borderRadius: 8,
 		alignItems: 'center',
-		justifyContent: 'center'
+		justifyContent: 'center',
+		marginTop: 16
 	},
 	numberText: {
 		color: Colors.accent500,
