@@ -10,12 +10,20 @@ const StartGameScreen = () => {
 		setEnteredNumber(enteredText)
 	}
 
+	const resetInputHandler = () => {
+		setEnteredNumber('')
+	}
+
 	const confirmInputHandler = () => {
 		const chosenNumber = parseInt(enteredNumber)
 
 		if (isNaN(chosenNumber) || chosenNumber <= 0 || chosenNumber > 99) {
 			Alert.alert('Error', 'Invalid number entered. Please try again', [
-				{ text: 'Okay', style: 'destructive' }
+				{
+					text: 'Okay',
+					style: 'destructive',
+					onPress: resetInputHandler
+				}
 			])
 			return
 		}
@@ -34,7 +42,7 @@ const StartGameScreen = () => {
 				/>
 			</View>
 			<View style={styles.secondInnerView}>
-				<PrimaryButton>Reset</PrimaryButton>
+				<PrimaryButton onPress={resetInputHandler}>Reset</PrimaryButton>
 				<PrimaryButton onPress={confirmInputHandler}>
 					Confirm
 				</PrimaryButton>
