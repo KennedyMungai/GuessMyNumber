@@ -2,8 +2,11 @@ import { StyleSheet } from 'react-native'
 import StartGameScreen from './screens/StartGameScreen'
 import { LinearGradient } from 'expo-linear-gradient'
 import { ImageBackground } from 'react-native'
+import { useState } from 'react'
 
 export default function App() {
+	const [userNumber, setUserNumber] = useState('')
+
 	return (
 		<LinearGradient
 			colors={['#ff4653', '#2A9D8F']}
