@@ -1,6 +1,16 @@
 import { SafeAreaView, StyleSheet, Text, View } from 'react-native'
 import Title from '../components/Title'
 
+const generateNumberBetween = (min, max, exclude) => {
+	const rndNum = Math.floor(Math.random() * (max - min)) + min
+
+	if (rndNum === exclude) {
+		return generateNumberBetween(min, max, exclude)
+	} else {
+		return rndNum
+	}
+}
+
 const GameScreen = () => {
 	return (
 		<SafeAreaView style={styles.screen}>
