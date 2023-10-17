@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { StyleSheet, TextInput, View } from 'react-native'
 import PrimaryButton from '../components/PrimaryButton'
+import { Alert } from 'react-native'
 
 const StartGameScreen = () => {
 	const [enteredNumber, setEnteredNumber] = useState('')
@@ -13,7 +14,7 @@ const StartGameScreen = () => {
 		const chosenNumber = parseInt(enteredNumber)
 
 		if (isNaN(chosenNumber) || chosenNumber <= 0 || chosenNumber > 99) {
-			// TODO Toaster Alert
+			Alert.alert('Error', 'Invalid number entered. Please try again')
 			return
 		}
 	}
