@@ -27,7 +27,9 @@ const StartGameScreen = () => {
 			</View>
 			<View style={styles.secondInnerView}>
 				<PrimaryButton>Reset</PrimaryButton>
-				<PrimaryButton>Confirm</PrimaryButton>
+				<PrimaryButton onPress={confirmInputHandler}>
+					Confirm
+				</PrimaryButton>
 			</View>
 		</View>
 	)
