@@ -1,4 +1,4 @@
-import { StyleSheet, Text, TextInput, View } from 'react-native'
+import { View } from 'react-native'
 
 const Card = ({ children }) => {
 	return <View>{children}</View>
