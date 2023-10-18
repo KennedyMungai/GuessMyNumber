@@ -2,7 +2,7 @@ import { View, Image, StyleSheet, Text } from 'react-native'
 import Title from '../components/ui/Title'
 import PrimaryButton from '../components/ui/PrimaryButton'
 
-const GameOverScreen = () => {
+const GameOverScreen = ({ restartGame }) => {
 	return (
 		<View style={styles.rootGameOverView}>
 			<View style={styles.gameOverView}>
@@ -21,7 +21,7 @@ const GameOverScreen = () => {
 					<Text style={styles.highlightedText}>Y</Text>
 				</Text>
 			</View>
-			<PrimaryButton>Start New Game</PrimaryButton>
+			<PrimaryButton onPress={restartGame}>Start New Game</PrimaryButton>
 		</View>
 	)
 }

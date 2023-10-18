@@ -38,8 +38,14 @@ export default function App() {
 		)
 	}
 
+	const restartGameHandler = () => {
+		setUserNumber(null)
+		setGameIsOver(false)
+		screen = <StartGameScreen onPickNumber={startGameHandler} />
+	}
+
 	if (gameIsOver && userNumber) {
-		screen = <GameOverScreen />
+		screen = <GameOverScreen restartGame={restartGameHandler} />
 	}
 
 	return (
