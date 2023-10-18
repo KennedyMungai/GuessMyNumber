@@ -1,8 +1,8 @@
-import { SafeAreaView, StyleSheet, Text, View } from 'react-native'
-import Title from '../components/ui/Title'
 import { useState } from 'react'
+import { SafeAreaView, StyleSheet, Text, View } from 'react-native'
 import NumberContainer from '../components/game/NumberContainer'
 import PrimaryButton from '../components/ui/PrimaryButton'
+import Title from '../components/ui/Title'
 
 const generateNumberBetween = (min, max, exclude) => {
 	const rndNum = Math.floor(Math.random() * (max - min)) + min
@@ -29,11 +29,17 @@ const GameScreen = ({ userNumber }) => {
 	const nextGuessHandler = (direction) => {
 		if (direction === 'lower') {
 			maxBoundary = currentGuess
-			generateNumberBetween(minBoundary, maxBoundary, currentGuess)
 		} else if (direction === 'upper') {
 			minBoundary = currentGuess
-			generateNumberBetween(minBoundary, maxBoundary, currentGuess)
 		}
+
+		const newRndNumber = generateNumberBetween(
+			minBoundary,
+			maxBoundary,
+			currentGuess
+		)
+
+		setCurrentGuess(newRndNumber)
 	}
 
 	return (
@@ -44,8 +50,16 @@ const GameScreen = ({ userNumber }) => {
 			<View style={styles.mainGameView}>
 				<Text style={styles.gameText}>Higher or Lower?</Text>
 				<View style={styles.gameButtonsView}>
-					<PrimaryButton>➕</PrimaryButton>
-					<PrimaryButton>➖</PrimaryButton>
+					<PrimaryButton
+						onPress={nextGuessHandler.bind(this, 'lower')}
+					>
+						➕
+					</PrimaryButton>
+					<PrimaryButton
+						onPress={nextGuessHandler.bind(this, 'lower')}
+					>
+						➖
+					</PrimaryButton>
 				</View>
 			</View>
 			<View>{/* TODO: Logging the rounds of the game */}</View>
