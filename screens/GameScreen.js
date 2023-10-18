@@ -58,7 +58,7 @@ const GameScreen = ({ userNumber, onGameOver }) => {
 
 		setCurrentGuess(newRndNumber)
 
-		setGuessRounds((prevGuessRounds) => [...prevGuessRounds, newRndNumber])
+		setGuessRounds((prevGuessRounds) => [newRndNumber, ...prevGuessRounds])
 	}
 
 	return (
