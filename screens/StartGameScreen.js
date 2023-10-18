@@ -95,6 +95,7 @@ const styles = StyleSheet.create({
 	topView: {
 		flex: 1,
 		marginTop: 100,
-		padding: 16
+		padding: 16,
+		alignItems: 'center'
 	}
 })
