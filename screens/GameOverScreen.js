@@ -11,6 +11,8 @@ const GameOverScreen = () => {
 				width={100}
 				style={styles.gameOverImage}
 			/>
+			{/* TODO: Some game logging */}
+			<Text>Your Phone Needed X rounds to guess the number Y</Text>
 		</View>
 	)
 }
