@@ -23,6 +23,10 @@ export default function App() {
 		screen = <GameOverScreen />
 	}
 
+	const gameOverHandler = () => {
+		setGameIsOver(true)
+	}
+
 	return (
 		<LinearGradient
 			colors={['#ff4653', '#2A9D8F']}
