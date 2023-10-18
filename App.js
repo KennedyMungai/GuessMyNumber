@@ -5,16 +5,20 @@ import GameOverScreen from './screens/GameOverScreen'
 import GameScreen from './screens/GameScreen'
 import StartGameScreen from './screens/StartGameScreen'
 import { useFonts } from 'expo-font'
-import AppLoading from 'expo-app-loading'
+import * as SplashScreen from 'expo-splash-screen'
 
 export default function App() {
 	const [userNumber, setUserNumber] = useState()
 	const [gameIsOver, setGameIsOver] = useState(false)
 
-	useFonts({
+	const [fontsLoaded] = useFonts({
 		'roboto-regular': require('./assets/fonts/Roboto/Roboto-Regular.ttf'),
 		'roboto-bold': require('./assets/fonts/Roboto/Roboto-Bold.ttf')
 	})
+
+	if (!fontsLoaded) {
+		return <AppLoading />
+	}
 
 	const startGameHandler = (pickedNumber) => {
 		setUserNumber(pickedNumber)
