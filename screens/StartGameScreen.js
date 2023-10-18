@@ -39,7 +39,7 @@ const StartGameScreen = ({ onPickNumber }) => {
 			<Title>Guess my Number</Title>
 			<View style={styles.startGameView}>
 				<Card>
-					<InstructionText style={{ color: 'red' }}>
+					<InstructionText style={styles.instructionStyle}>
 						Enter A Number
 					</InstructionText>
 					<TextInput
@@ -103,5 +103,8 @@ const styles = StyleSheet.create({
 		marginVertical: 8,
 		textAlign: 'center',
 		width: 100
+	},
+	instructionStyle: {
+		marginBottom: 20
 	}
 })
