@@ -14,16 +14,25 @@ const generateNumberBetween = (min, max, exclude) => {
 	}
 }
 
+let minBoundary = 1
+let maxBoundary = 100
+
 const GameScreen = ({ userNumber }) => {
-	const initialGuess = generateNumberBetween(1, 100, userNumber)
+	const initialGuess = generateNumberBetween(
+		minBoundary,
+		maxBoundary,
+		userNumber
+	)
 
 	const [currentGuess, setCurrentGuess] = useState(initialGuess)
 
 	const nextGuessHandler = (direction) => {
 		if (direction === 'lower') {
-			setCurrentGuess(currentGuess - 1)
+			maxBoundary = currentGuess
+			generateNumberBetween(minBoundary, maxBoundary, currentGuess)
 		} else if (direction === 'upper') {
-			setCurrentGuess(currentGuess + 1)
+			minBoundary = currentGuess
+			generateNumberBetween(minBoundary, maxBoundary, currentGuess)
 		}
 	}
 
