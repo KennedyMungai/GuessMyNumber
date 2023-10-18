@@ -1,11 +1,31 @@
-import { View, Text } from 'react-native'
+import { View, Image, StyleSheet } from 'react-native'
+import Title from '../components/ui/Title'
 
 const GameOverScreen = () => {
 	return (
-		<View>
-			<Text>Game is Over</Text>
+		<View style={styles.gameOverView}>
+			<Title>Game is Over</Title>
+			<Image
+				source={require('../assets/images/nike.png')}
+				height={100}
+				width={100}
+				style={styles.gameOverImage}
+			/>
 		</View>
 	)
 }
 
 export default GameOverScreen
+
+const styles = StyleSheet.create({
+	gameOverView: {
+		flex: 1,
+		padding: 10,
+		marginTop: 40,
+		alignItems: 'center'
+	},
+	gameOverImage: {
+		width: 250,
+		height: 250
+	}
+})
