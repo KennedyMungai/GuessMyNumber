@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Alert, StyleSheet, TextInput, View } from 'react-native'
+import { Alert, StyleSheet, Text, TextInput, View } from 'react-native'
 import PrimaryButton from '../components/ui/PrimaryButton'
 import Colors from '../utils/colors'
 import Title from '../components/ui/Title'
@@ -37,6 +37,7 @@ const StartGameScreen = ({ onPickNumber }) => {
 			<Title>Guess my Number</Title>
 			<View style={styles.startGameView}>
 				<View>
+					<Text style={styles.instructionText}>Enter A Number</Text>
 					<TextInput
 						style={styles.startGameInput}
 						placeholder='Guess'
@@ -97,5 +98,11 @@ const styles = StyleSheet.create({
 		marginTop: 100,
 		padding: 16,
 		alignItems: 'center'
+	},
+	instructionText: {
+		fontSize: 20,
+		fontWeight: 'bold',
+		color: 'white',
+		marginBottom: 8
 	}
 })
