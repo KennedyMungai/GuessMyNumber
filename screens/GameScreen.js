@@ -17,7 +17,7 @@ const generateNumberBetween = (min, max, exclude) => {
 let minBoundary = 1
 let maxBoundary = 100
 
-const GameScreen = ({ userNumber }) => {
+const GameScreen = ({ userNumber, gameOver }) => {
 	const initialGuess = generateNumberBetween(
 		minBoundary,
 		maxBoundary,

@@ -7,24 +7,26 @@ import GameOverScreen from './screens/GameOverScreen'
 
 export default function App() {
 	const [userNumber, setUserNumber] = useState()
-	const [gameIsOver, setGameIsOver] = useState(true)
+	const [gameIsOver, setGameIsOver] = useState(false)
 
 	const startGameHandler = (pickedNumber) => {
 		setUserNumber(pickedNumber)
 	}
 
+	const gameOverHandler = () => {
+		setGameIsOver(true)
+	}
+
 	let screen = <StartGameScreen onPickNumber={startGameHandler} />
 
 	if (userNumber) {
-		screen = <GameScreen userNumber={userNumber} />
+		screen = (
+			<GameScreen userNumber={userNumber} gameOver={gameOverHandler} />
+		)
 	}
 
 	if (gameIsOver) {
 		screen = <GameOverScreen />
-	}
-
-	const gameOverHandler = () => {
-		setGameIsOver(true)
 	}
 
 	return (
