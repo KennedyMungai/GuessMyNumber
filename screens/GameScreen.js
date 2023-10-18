@@ -3,6 +3,7 @@ import { Alert, SafeAreaView, StyleSheet, Text, View } from 'react-native'
 import NumberContainer from '../components/game/NumberContainer'
 import PrimaryButton from '../components/ui/PrimaryButton'
 import Title from '../components/ui/Title'
+import { Ionicons } from '@expo/vector-icons'
 
 const generateNumberBetween = (min, max, exclude) => {
 	const rndNum = Math.floor(Math.random() * (max - min)) + min
