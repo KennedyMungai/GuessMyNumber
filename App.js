@@ -4,6 +4,7 @@ import { ImageBackground, StyleSheet } from 'react-native'
 import GameOverScreen from './screens/GameOverScreen'
 import GameScreen from './screens/GameScreen'
 import StartGameScreen from './screens/StartGameScreen'
+import { useFonts } from 'expo-font'
 
 export default function App() {
 	const [userNumber, setUserNumber] = useState()
