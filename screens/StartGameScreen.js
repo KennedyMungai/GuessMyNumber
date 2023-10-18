@@ -3,6 +3,7 @@ import { Alert, StyleSheet, Text, TextInput, View } from 'react-native'
 import PrimaryButton from '../components/ui/PrimaryButton'
 import Colors from '../utils/colors'
 import Title from '../components/ui/Title'
+import Card from '../components/ui/Card'
 
 const StartGameScreen = ({ onPickNumber }) => {
 	const [enteredNumber, setEnteredNumber] = useState('')
@@ -36,17 +37,10 @@ const StartGameScreen = ({ onPickNumber }) => {
 		<View style={styles.topView}>
 			<Title>Guess my Number</Title>
 			<View style={styles.startGameView}>
-				<View>
-					<Text style={styles.instructionText}>Enter A Number</Text>
-					<TextInput
-						style={styles.startGameInput}
-						placeholder='Guess'
-						keyboardType='number-pad'
-						maxLength={2}
-						value={enteredNumber}
-						onChangeText={numberInputHandler}
-					/>
-				</View>
+				<Card
+					enteredNumber={enteredNumber}
+					numberInputHandler={numberInputHandler}
+				/>
 				<View style={styles.secondInnerView}>
 					<PrimaryButton onPress={resetInputHandler}>
 						Reset
@@ -78,15 +72,7 @@ const styles = StyleSheet.create({
 		shadowOffset: { width: 4, height: 4 },
 		shadowRadius: 6
 	},
-	startGameInput: {
-		borderBottomWidth: 2,
-		padding: 5,
-		borderBottomColor: '#264653',
-		fontWeight: 'bold',
-		marginVertical: 8,
-		textAlign: 'center',
-		width: 100
-	},
+
 	firstInnerView: {},
 	secondInnerView: {
 		flexDirection: 'row',
@@ -98,11 +84,5 @@ const styles = StyleSheet.create({
 		marginTop: 100,
 		padding: 16,
 		alignItems: 'center'
-	},
-	instructionText: {
-		fontSize: 20,
-		fontWeight: 'bold',
-		color: 'white',
-		marginBottom: 8
 	}
 })
