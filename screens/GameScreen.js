@@ -19,6 +19,14 @@ const GameScreen = ({ userNumber }) => {
 
 	const [currentGuess, setCurrentGuess] = useState(initialGuess)
 
+	const nextGuessHandler = (direction) => {
+		if (direction === 'lower') {
+			setCurrentGuess(currentGuess - 1)
+		} else if (direction === 'upper') {
+			setCurrentGuess(currentGuess + 1)
+		}
+	}
+
 	return (
 		<SafeAreaView style={styles.screen}>
 			<Title>Opponent's Guess</Title>
