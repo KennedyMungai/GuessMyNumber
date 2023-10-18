@@ -125,7 +125,7 @@ const styles = StyleSheet.create({
 	guessRoundText: {
 		color: '#DDD',
 		fontSize: 24,
-		marginBottom: 8,
+		marginBottom: 3,
 		textAlign: 'center',
 		backgroundColor: Colors.primary800,
 		marginTop: 10,
