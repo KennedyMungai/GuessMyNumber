@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { Alert, StyleSheet, TextInput, View } from 'react-native'
 import PrimaryButton from '../components/ui/PrimaryButton'
 import Colors from '../utils/colors'
+import Title from '../components/ui/Title'
 
 const StartGameScreen = ({ onPickNumber }) => {
 	const [enteredNumber, setEnteredNumber] = useState('')
@@ -32,22 +33,27 @@ const StartGameScreen = ({ onPickNumber }) => {
 	}
 
 	return (
-		<View style={styles.startGameView}>
-			<View>
-				<TextInput
-					style={styles.startGameInput}
-					placeholder='Guess'
-					keyboardType='number-pad'
-					maxLength={2}
-					value={enteredNumber}
-					onChangeText={numberInputHandler}
-				/>
-			</View>
-			<View style={styles.secondInnerView}>
-				<PrimaryButton onPress={resetInputHandler}>Reset</PrimaryButton>
-				<PrimaryButton onPress={confirmInputHandler}>
-					Confirm
-				</PrimaryButton>
+		<View style={styles.topView}>
+			<Title>Guess my Number</Title>
+			<View style={styles.startGameView}>
+				<View>
+					<TextInput
+						style={styles.startGameInput}
+						placeholder='Guess'
+						keyboardType='number-pad'
+						maxLength={2}
+						value={enteredNumber}
+						onChangeText={numberInputHandler}
+					/>
+				</View>
+				<View style={styles.secondInnerView}>
+					<PrimaryButton onPress={resetInputHandler}>
+						Reset
+					</PrimaryButton>
+					<PrimaryButton onPress={confirmInputHandler}>
+						Confirm
+					</PrimaryButton>
+				</View>
 			</View>
 		</View>
 	)
@@ -64,7 +70,7 @@ const styles = StyleSheet.create({
 		padding: 16,
 		backgroundColor: Colors.accent500,
 		marginHorizontal: 10,
-		marginTop: 50,
+		marginTop: 32,
 		borderRadius: 8,
 		elevation: 4,
 		shadowColor: 'black',
@@ -85,5 +91,10 @@ const styles = StyleSheet.create({
 		flexDirection: 'row',
 		justifyContent: 'space-around',
 		gap: 20
+	},
+	topView: {
+		flex: 1,
+		marginTop: 100,
+		padding: 16
 	}
 })
