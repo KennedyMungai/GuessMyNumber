@@ -31,8 +31,9 @@ const GameScreen = ({ userNumber, onGameOver }) => {
 			Alert.alert('You won!', 'You guessed the number', [
 				{ text: 'Okay', style: 'destructive', onPress: () => {} }
 			])
+			onGameOver()
 		}
-	}, [])
+	}, [currentGuess, userNumber, onGameOver])
 
 	const nextGuessHandler = (direction) => {
 		if (
