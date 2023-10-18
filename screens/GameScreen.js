@@ -1,9 +1,17 @@
 import { useState, useEffect } from 'react'
-import { Alert, SafeAreaView, StyleSheet, Text, View } from 'react-native'
+import {
+	Alert,
+	FlatList,
+	SafeAreaView,
+	StyleSheet,
+	Text,
+	View
+} from 'react-native'
 import NumberContainer from '../components/game/NumberContainer'
 import PrimaryButton from '../components/ui/PrimaryButton'
 import Title from '../components/ui/Title'
 import { Ionicons } from '@expo/vector-icons'
+import Colors from '../utils/colors'
 
 const generateNumberBetween = (min, max, exclude) => {
 	const rndNum = Math.floor(Math.random() * (max - min)) + min
@@ -81,13 +89,13 @@ const GameScreen = ({ userNumber, onGameOver }) => {
 					</PrimaryButton>
 				</View>
 			</View>
-			<View style={styles.guessRoundView}>
-				{guessRounds.map((guessRound) => (
-					<Text key={guessRound} style={styles.guessRoundText}>
-						{guessRound}
-					</Text>
-				))}
-			</View>
+			<FlatList
+				data={guessRounds}
+				renderItem={(itemData) => (
+					<Text style={styles.guessRoundText}>{itemData.item}</Text>
+				)}
+				keyExtractor={(item) => item}
+			/>
 		</SafeAreaView>
 	)
 }
@@ -117,11 +125,10 @@ const styles = StyleSheet.create({
 	guessRoundText: {
 		color: '#DDD',
 		fontSize: 24,
-		marginBottom: 8
-	},
-	guessRoundView: {
-		flexDirection: 'column',
-		alignItems: 'center',
-		marginTop: 32
+		marginBottom: 8,
+		textAlign: 'center',
+		backgroundColor: Colors.primary800,
+		marginTop: 10,
+		borderRadius: 8
 	}
 })
