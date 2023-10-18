@@ -39,7 +39,9 @@ const StartGameScreen = ({ onPickNumber }) => {
 			<Title>Guess my Number</Title>
 			<View style={styles.startGameView}>
 				<Card>
-					<InstructionText>Enter A Number</InstructionText>
+					<InstructionText style={{ color: 'red' }}>
+						Enter A Number
+					</InstructionText>
 					<TextInput
 						style={styles.startGameInput}
 						placeholder='Guess'
