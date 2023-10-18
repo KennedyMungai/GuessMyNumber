@@ -69,12 +69,12 @@ const GameScreen = ({ userNumber, onGameOver }) => {
 					<PrimaryButton
 						onPress={nextGuessHandler.bind(this, 'upper')}
 					>
-						<Ionicons name='md-add' size={24} color={'black'} />
+						<Ionicons name='md-add' size={32} color={'black'} />
 					</PrimaryButton>
 					<PrimaryButton
 						onPress={nextGuessHandler.bind(this, 'lower')}
 					>
-						<Ionicons name='md-remove' size={24} color={'black'} />
+						<Ionicons name='md-remove' size={32} color={'black'} />
 					</PrimaryButton>
 				</View>
 			</View>
