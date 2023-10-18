@@ -22,6 +22,7 @@ const GameScreen = ({ userNumber, onGameOver }) => {
 	const initialGuess = generateNumberBetween(1, 100, userNumber)
 
 	const [currentGuess, setCurrentGuess] = useState(initialGuess)
+	const [guessRounds, setGuessRounds] = useState([initialGuess])
 
 	useEffect(() => {
 		if (currentGuess === userNumber) {
