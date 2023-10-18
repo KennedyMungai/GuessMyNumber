@@ -51,7 +51,7 @@ const GameScreen = ({ userNumber }) => {
 				<Text style={styles.gameText}>Higher or Lower?</Text>
 				<View style={styles.gameButtonsView}>
 					<PrimaryButton
-						onPress={nextGuessHandler.bind(this, 'lower')}
+						onPress={nextGuessHandler.bind(this, 'upper')}
 					>
 						➕
 					</PrimaryButton>
