@@ -91,5 +91,20 @@ const styles = StyleSheet.create({
 		marginTop: 100,
 		padding: 16,
 		alignItems: 'center'
+	},
+	instructionText: {
+		fontSize: 20,
+		fontWeight: 'bold',
+		color: 'white',
+		marginBottom: 8
+	},
+	startGameInput: {
+		borderBottomWidth: 2,
+		padding: 5,
+		borderBottomColor: '#264653',
+		fontWeight: 'bold',
+		marginVertical: 8,
+		textAlign: 'center',
+		width: 100
 	}
 })
