@@ -92,7 +92,9 @@ const GameScreen = ({ userNumber, onGameOver }) => {
 			</View>
 			<FlatList
 				data={guessRounds}
-				renderItem={(itemData) => <LogItems>{itemData.item}</LogItems>}
+				renderItem={(itemData) => (
+					<LogItems index={itemData.index} content={itemData.item} />
+				)}
 				keyExtractor={(item) => item}
 			/>
 		</SafeAreaView>

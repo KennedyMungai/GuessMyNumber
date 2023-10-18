@@ -1,9 +1,14 @@
 import React from 'react'
-import { StyleSheet, Text } from 'react-native'
+import { StyleSheet, Text, View } from 'react-native'
 import Colors from '../../utils/colors'
 
-const LogItems = ({ children }) => {
-	return <Text style={styles.guessRoundText}>{children}</Text>
+const LogItems = ({ content, index }) => {
+	return (
+		<View style={styles.mainGuessView}>
+			<Text>{index}</Text>
+			<Text style={styles.guessRoundText}>{content}</Text>
+		</View>
+	)
 }
 
 export default LogItems
@@ -17,5 +22,8 @@ const styles = StyleSheet.create({
 		backgroundColor: Colors.primary800,
 		marginTop: 10,
 		borderRadius: 8
+	},
+	mainGuessView: {
+		justifyContent: 'center'
 	}
 })
