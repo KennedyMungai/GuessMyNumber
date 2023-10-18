@@ -10,6 +10,11 @@ export default function App() {
 	const [userNumber, setUserNumber] = useState()
 	const [gameIsOver, setGameIsOver] = useState(false)
 
+	useFonts({
+		'roboto-regular': require('./assets/fonts/Roboto/Roboto-Regular.ttf'),
+		'roboto-bold': require('./assets/fonts/Roboto/Roboto-Bold.ttf')
+	})
+
 	const startGameHandler = (pickedNumber) => {
 		setUserNumber(pickedNumber)
 	}
