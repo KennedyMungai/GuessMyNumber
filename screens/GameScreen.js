@@ -81,7 +81,13 @@ const GameScreen = ({ userNumber, onGameOver }) => {
 					</PrimaryButton>
 				</View>
 			</View>
-			<View>{/* TODO: Logging the rounds of the game */}</View>
+			<View style={styles.guessRoundView}>
+				{guessRounds.map((guessRound) => (
+					<Text key={guessRound} style={styles.guessRoundText}>
+						{guessRound}
+					</Text>
+				))}
+			</View>
 		</SafeAreaView>
 	)
 }
@@ -106,6 +112,16 @@ const styles = StyleSheet.create({
 		marginTop: 16
 	},
 	mainGameView: {
+		marginTop: 32
+	},
+	guessRoundText: {
+		color: '#DDD',
+		fontSize: 24,
+		marginBottom: 8
+	},
+	guessRoundView: {
+		flexDirection: 'column',
+		alignItems: 'center',
 		marginTop: 32
 	}
 })
