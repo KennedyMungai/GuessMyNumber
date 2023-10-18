@@ -1,4 +1,4 @@
-import { View, Image, StyleSheet } from 'react-native'
+import { View, Image, StyleSheet, Text } from 'react-native'
 import Title from '../components/ui/Title'
 
 const GameOverScreen = () => {
@@ -12,7 +12,11 @@ const GameOverScreen = () => {
 				style={styles.gameOverImage}
 			/>
 			{/* TODO: Some game logging */}
-			<Text>Your Phone Needed X rounds to guess the number Y</Text>
+			<Text style={styles.gameOverText}>
+				Your Phone Needed <Text style={styles.highlightedText}>X</Text>{' '}
+				rounds to guess the number{' '}
+				<Text style={styles.highlightedText}>Y</Text>
+			</Text>
 		</View>
 	)
 }
@@ -29,5 +33,14 @@ const styles = StyleSheet.create({
 	gameOverImage: {
 		width: 250,
 		height: 250
+	},
+	gameOverText: {
+		color: 'white',
+		fontSize: 16
+	},
+	highlightedText: {
+		color: '#FF5566',
+		fontWeight: 'bold',
+		fontSize: 20
 	}
 })
