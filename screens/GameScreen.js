@@ -32,7 +32,7 @@ const GameScreen = ({ userNumber }) => {
 			(direction === 'upper' && currentGuess > userNumber)
 		) {
 			Alert.alert("Don't lie!", 'You know this is wrong', [
-				{ text: 'Sorry!', style: 'destructive' }
+				{ text: 'Sorry!', style: 'cancel' }
 			])
 			return
 		}
