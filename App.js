@@ -11,13 +11,15 @@ export default function App() {
 	const [userNumber, setUserNumber] = useState()
 	const [gameIsOver, setGameIsOver] = useState(false)
 
+	SplashScreen.preventAutoHideAsync()
+
 	const [fontsLoaded] = useFonts({
 		'roboto-regular': require('./assets/fonts/Roboto/Roboto-Regular.ttf'),
 		'roboto-bold': require('./assets/fonts/Roboto/Roboto-Bold.ttf')
 	})
 
 	if (!fontsLoaded) {
-		return <AppLoading />
+		SplashScreen.hideAsync()
 	}
 
 	const startGameHandler = (pickedNumber) => {
