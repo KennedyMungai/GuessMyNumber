@@ -26,6 +26,14 @@ const GameScreen = ({ userNumber }) => {
 
 	const [currentGuess, setCurrentGuess] = useState(initialGuess)
 
+	useEffect(() => {
+		if (currentGuess === userNumber) {
+			Alert.alert('You won!', 'You guessed the number', [
+				{ text: 'Okay', style: 'destructive', onPress: () => {} }
+			])
+		}
+	}, [])
+
 	const nextGuessHandler = (direction) => {
 		if (
 			(direction === 'lower' && currentGuess < userNumber) ||
