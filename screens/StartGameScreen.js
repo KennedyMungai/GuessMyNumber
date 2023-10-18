@@ -37,10 +37,17 @@ const StartGameScreen = ({ onPickNumber }) => {
 		<View style={styles.topView}>
 			<Title>Guess my Number</Title>
 			<View style={styles.startGameView}>
-				<Card
-					enteredNumber={enteredNumber}
-					numberInputHandler={numberInputHandler}
-				/>
+				<Card>
+					<Text style={styles.instructionText}>Enter A Number</Text>
+					<TextInput
+						style={styles.startGameInput}
+						placeholder='Guess'
+						keyboardType='number-pad'
+						maxLength={2}
+						value={enteredNumber}
+						onChangeText={numberInputHandler}
+					/>
+				</Card>
 				<View style={styles.secondInnerView}>
 					<PrimaryButton onPress={resetInputHandler}>
 						Reset

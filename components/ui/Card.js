@@ -1,19 +1,7 @@
 import { StyleSheet, Text, TextInput, View } from 'react-native'
 
-const Card = ({ enteredNumber, numberInputHandler }) => {
-	return (
-		<View>
-			<Text style={styles.instructionText}>Enter A Number</Text>
-			<TextInput
-				style={styles.startGameInput}
-				placeholder='Guess'
-				keyboardType='number-pad'
-				maxLength={2}
-				value={enteredNumber}
-				onChangeText={numberInputHandler}
-			/>
-		</View>
-	)
+const Card = ({ children }) => {
+	return <View>{children}</View>
 }
 
 export default Card
