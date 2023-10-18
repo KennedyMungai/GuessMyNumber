@@ -18,11 +18,7 @@ let minBoundary = 1
 let maxBoundary = 100
 
 const GameScreen = ({ userNumber, onGameOver }) => {
-	const initialGuess = generateNumberBetween(
-		minBoundary,
-		maxBoundary,
-		userNumber
-	)
+	const initialGuess = generateNumberBetween(1, 100, userNumber)
 
 	const [currentGuess, setCurrentGuess] = useState(initialGuess)
 
