@@ -5,6 +5,7 @@ import GameOverScreen from './screens/GameOverScreen'
 import GameScreen from './screens/GameScreen'
 import StartGameScreen from './screens/StartGameScreen'
 import { useFonts } from 'expo-font'
+import AppLoading from 'expo-app-loading'
 
 export default function App() {
 	const [userNumber, setUserNumber] = useState()
