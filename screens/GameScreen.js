@@ -12,6 +12,7 @@ import PrimaryButton from '../components/ui/PrimaryButton'
 import Title from '../components/ui/Title'
 import { Ionicons } from '@expo/vector-icons'
 import Colors from '../utils/colors'
+import LogItems from '../components/game/logItems'
 
 const generateNumberBetween = (min, max, exclude) => {
 	const rndNum = Math.floor(Math.random() * (max - min)) + min
@@ -91,9 +92,7 @@ const GameScreen = ({ userNumber, onGameOver }) => {
 			</View>
 			<FlatList
 				data={guessRounds}
-				renderItem={(itemData) => (
-					<Text style={styles.guessRoundText}>{itemData.item}</Text>
-				)}
+				renderItem={(itemData) => <LogItems>{itemData.item}</LogItems>}
 				keyExtractor={(item) => item}
 			/>
 		</SafeAreaView>
@@ -121,14 +120,5 @@ const styles = StyleSheet.create({
 	},
 	mainGameView: {
 		marginTop: 32
-	},
-	guessRoundText: {
-		color: '#DDD',
-		fontSize: 24,
-		marginBottom: 3,
-		textAlign: 'center',
-		backgroundColor: Colors.primary800,
-		marginTop: 10,
-		borderRadius: 8
 	}
 })
