@@ -1,4 +1,4 @@
-import { View, Image, StyleSheet, Text } from 'react-native'
+import { View, Image, StyleSheet, Text, Dimensions } from 'react-native'
 import Title from '../components/ui/Title'
 import PrimaryButton from '../components/ui/PrimaryButton'
 
@@ -28,6 +28,8 @@ const GameOverScreen = ({ restartGame }) => {
 
 export default GameOverScreen
 
+const deviceWidth = Dimensions.get('window').width
+
 const styles = StyleSheet.create({
 	rootGameOverView: {
 		flex: 1,
@@ -43,8 +45,8 @@ const styles = StyleSheet.create({
 		gap: 10
 	},
 	gameOverImage: {
-		width: 250,
-		height: 250
+		width: deviceWidth < 380 ? 150 : 300,
+		height: deviceWidth < 380 ? 150 : 300
 	},
 	gameOverText: {
 		color: 'white',
