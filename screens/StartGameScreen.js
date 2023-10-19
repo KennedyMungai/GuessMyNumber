@@ -46,32 +46,34 @@ const StartGameScreen = ({ onPickNumber }) => {
 	const marginTopStyling = height < 380 ? 30 : 100
 
 	return (
-		<View style={[styles.topView, { marginTop: marginTopStyling }]}>
-			<Title>Guess my Number</Title>
-			<View style={styles.startGameView}>
-				<Card>
-					<InstructionText style={styles.instructionStyle}>
-						Enter A Number
-					</InstructionText>
-					<TextInput
-						style={styles.startGameInput}
-						placeholder='Guess'
-						keyboardType='number-pad'
-						maxLength={2}
-						value={enteredNumber}
-						onChangeText={numberInputHandler}
-					/>
-				</Card>
-				<View style={styles.secondInnerView}>
-					<PrimaryButton onPress={resetInputHandler}>
-						Reset
-					</PrimaryButton>
-					<PrimaryButton onPress={confirmInputHandler}>
-						Confirm
-					</PrimaryButton>
+		<KeyboardAvoidingView style={styles.keyboardAvoidingStyles}>
+			<View style={[styles.topView, { marginTop: marginTopStyling }]}>
+				<Title>Guess my Number</Title>
+				<View style={styles.startGameView}>
+					<Card>
+						<InstructionText style={styles.instructionStyle}>
+							Enter A Number
+						</InstructionText>
+						<TextInput
+							style={styles.startGameInput}
+							placeholder='Guess'
+							keyboardType='number-pad'
+							maxLength={2}
+							value={enteredNumber}
+							onChangeText={numberInputHandler}
+						/>
+					</Card>
+					<View style={styles.secondInnerView}>
+						<PrimaryButton onPress={resetInputHandler}>
+							Reset
+						</PrimaryButton>
+						<PrimaryButton onPress={confirmInputHandler}>
+							Confirm
+						</PrimaryButton>
+					</View>
 				</View>
 			</View>
-		</View>
+		</KeyboardAvoidingView>
 	)
 }
 
@@ -116,5 +118,8 @@ const styles = StyleSheet.create({
 	},
 	instructionStyle: {
 		marginBottom: 20
+	},
+	keyboardAvoidingStyles: {
+		flex: 1
 	}
 })
