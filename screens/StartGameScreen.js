@@ -47,7 +47,7 @@ const StartGameScreen = ({ onPickNumber }) => {
 	const marginTopStyling = height < 380 ? 30 : 100
 
 	return (
-		<ScrollView>
+		<ScrollView style={{ flex: 1 }}>
 			<KeyboardAvoidingView
 				style={styles.keyboardAvoidingStyles}
 				behavior='position'
