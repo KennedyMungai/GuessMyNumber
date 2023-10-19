@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Alert, StyleSheet, TextInput, View } from 'react-native'
+import { Alert, StyleSheet, TextInput, View, Dimensions } from 'react-native'
 import Card from '../components/ui/Card'
 import InstructionText from '../components/ui/InstructionText'
 import PrimaryButton from '../components/ui/PrimaryButton'
@@ -65,6 +65,8 @@ const StartGameScreen = ({ onPickNumber }) => {
 }
 
 export default StartGameScreen
+
+const deviceHeight = Dimensions.get('window').height
 
 const styles = StyleSheet.create({
 	startGameView: {
