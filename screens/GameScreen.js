@@ -33,6 +33,8 @@ const GameScreen = ({ userNumber, onGameOver }) => {
 	const [currentGuess, setCurrentGuess] = useState(initialGuess)
 	const [guessRounds, setGuessRounds] = useState([initialGuess])
 
+	const { width, height } = useWindowDimensions()
+
 	useEffect(() => {
 		if (currentGuess === userNumber) {
 			Alert.alert('You won!', 'You guessed the number', [
