@@ -72,11 +72,9 @@ const GameScreen = ({ userNumber, onGameOver }) => {
 		setGuessRounds((prevGuessRounds) => [newRndNumber, ...prevGuessRounds])
 	}
 
-	return (
-		<SafeAreaView style={styles.screen}>
-			<Title>Opponent's Guess</Title>
+	let content = (
+		<>
 			<NumberContainer>{currentGuess}</NumberContainer>
-			<Text></Text>
 			<View style={styles.mainGameView}>
 				<Text style={styles.gameText}>Higher or Lower?</Text>
 				<View style={styles.gameButtonsView}>
@@ -92,6 +90,40 @@ const GameScreen = ({ userNumber, onGameOver }) => {
 					</PrimaryButton>
 				</View>
 			</View>
+		</>
+	)
+
+	if (width > 500) {
+		content = (
+			<>
+				<Text style={styles.gameText}>Higher or Lower?</Text>
+				<View
+					style={{
+						flexDirection: 'row',
+						justifyContent: 'space-around',
+						alignItems: 'center'
+					}}
+				>
+					<PrimaryButton
+						onPress={nextGuessHandler.bind(this, 'upper')}
+					>
+						<Ionicons name='md-add' size={32} color={'black'} />
+					</PrimaryButton>
+					<NumberContainer>{currentGuess}</NumberContainer>
+					<PrimaryButton
+						onPress={nextGuessHandler.bind(this, 'lower')}
+					>
+						<Ionicons name='md-remove' size={32} color={'black'} />
+					</PrimaryButton>
+				</View>
+			</>
+		)
+	}
+
+	return (
+		<SafeAreaView style={styles.screen}>
+			<Title>Opponent's Guess</Title>
+			{content}
 			<FlatList
 				data={guessRounds}
 				renderItem={(itemData) => (
@@ -109,7 +141,8 @@ const styles = StyleSheet.create({
 	screen: {
 		flex: 1,
 		padding: 12,
-		marginTop: 40
+		marginTop: 40,
+		justifyContent: 'center'
 	},
 	gameText: {
 		fontSize: 24,
