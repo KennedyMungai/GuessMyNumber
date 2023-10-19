@@ -1,4 +1,11 @@
-import { View, Image, StyleSheet, Text, Dimensions } from 'react-native'
+import {
+	View,
+	Image,
+	StyleSheet,
+	Text,
+	Dimensions,
+	useWindowDimensions
+} from 'react-native'
 import Title from '../components/ui/Title'
 import PrimaryButton from '../components/ui/PrimaryButton'
 
