@@ -28,7 +28,7 @@ const GameOverScreen = ({ restartGame }) => {
 	}
 
 	return (
-		<ScrollView>
+		<ScrollView style={{ flex: 1 }}>
 			<View style={styles.rootGameOverView}>
 				<View style={styles.gameOverView}>
 					<Title>Game is Over</Title>
