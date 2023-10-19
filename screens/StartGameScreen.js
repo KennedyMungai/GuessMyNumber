@@ -5,7 +5,8 @@ import {
 	StyleSheet,
 	TextInput,
 	View,
-	KeyboardAvoidingView
+	KeyboardAvoidingView,
+	ScrollView
 } from 'react-native'
 import Card from '../components/ui/Card'
 import InstructionText from '../components/ui/InstructionText'
@@ -46,34 +47,39 @@ const StartGameScreen = ({ onPickNumber }) => {
 	const marginTopStyling = height < 380 ? 30 : 100
 
 	return (
-		<KeyboardAvoidingView style={styles.keyboardAvoidingStyles}>
-			<View style={[styles.topView, { marginTop: marginTopStyling }]}>
-				<Title>Guess my Number</Title>
-				<View style={styles.startGameView}>
-					<Card>
-						<InstructionText style={styles.instructionStyle}>
-							Enter A Number
-						</InstructionText>
-						<TextInput
-							style={styles.startGameInput}
-							placeholder='Guess'
-							keyboardType='number-pad'
-							maxLength={2}
-							value={enteredNumber}
-							onChangeText={numberInputHandler}
-						/>
-					</Card>
-					<View style={styles.secondInnerView}>
-						<PrimaryButton onPress={resetInputHandler}>
-							Reset
-						</PrimaryButton>
-						<PrimaryButton onPress={confirmInputHandler}>
-							Confirm
-						</PrimaryButton>
+		<ScrollView>
+			<KeyboardAvoidingView
+				style={styles.keyboardAvoidingStyles}
+				behavior='position'
+			>
+				<View style={[styles.topView, { marginTop: marginTopStyling }]}>
+					<Title>Guess my Number</Title>
+					<View style={styles.startGameView}>
+						<Card>
+							<InstructionText style={styles.instructionStyle}>
+								Enter A Number
+							</InstructionText>
+							<TextInput
+								style={styles.startGameInput}
+								placeholder='Guess'
+								keyboardType='number-pad'
+								maxLength={2}
+								value={enteredNumber}
+								onChangeText={numberInputHandler}
+							/>
+						</Card>
+						<View style={styles.secondInnerView}>
+							<PrimaryButton onPress={resetInputHandler}>
+								Reset
+							</PrimaryButton>
+							<PrimaryButton onPress={confirmInputHandler}>
+								Confirm
+							</PrimaryButton>
+						</View>
 					</View>
 				</View>
-			</View>
-		</KeyboardAvoidingView>
+			</KeyboardAvoidingView>
+		</ScrollView>
 	)
 }
 
