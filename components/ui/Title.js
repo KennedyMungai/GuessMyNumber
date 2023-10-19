@@ -12,7 +12,7 @@ const styles = StyleSheet.create({
 		fontWeight: 'bold',
 		color: 'white',
 		textAlign: 'center',
-		borderWidth: 2,
+		borderWidth: Platform.OS === 'android' ? 2 : 0,
 		borderColor: 'white',
 		padding: 12,
 		borderRadius: 8,
