@@ -35,7 +35,7 @@ const GameOverScreen = ({ restartGame }) => {
 
 export default GameOverScreen
 
-const deviceWidth = Dimensions.get('window').width
+// const deviceWidth = Dimensions.get('window').width
 
 const styles = StyleSheet.create({
 	rootGameOverView: {
@@ -52,8 +52,8 @@ const styles = StyleSheet.create({
 		gap: 10
 	},
 	gameOverImage: {
-		width: deviceWidth < 380 ? 150 : 300,
-		height: deviceWidth < 380 ? 150 : 300
+		// width: deviceWidth < 380 ? 150 : 300,
+		// height: deviceWidth < 380 ? 150 : 300
 	},
 	gameOverText: {
 		color: 'white',
