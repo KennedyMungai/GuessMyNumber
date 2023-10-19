@@ -6,7 +6,8 @@ import {
 	SafeAreaView,
 	StyleSheet,
 	Text,
-	View
+	View,
+	useWindowDimensions
 } from 'react-native'
 import NumberContainer from '../components/game/NumberContainer'
 import LogItems from '../components/game/logItems'
