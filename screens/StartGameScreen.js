@@ -15,6 +15,8 @@ import Colors from '../utils/colors'
 const StartGameScreen = ({ onPickNumber }) => {
 	const [enteredNumber, setEnteredNumber] = useState('')
 
+	const { width, height } = useWindowDimensions()
+
 	const numberInputHandler = (enteredText) => {
 		setEnteredNumber(enteredText)
 	}
