@@ -1,11 +1,12 @@
+import { useFonts } from 'expo-font'
 import { LinearGradient } from 'expo-linear-gradient'
+import * as SplashScreen from 'expo-splash-screen'
 import { useState } from 'react'
 import { ImageBackground, StyleSheet } from 'react-native'
 import GameOverScreen from './screens/GameOverScreen'
 import GameScreen from './screens/GameScreen'
 import StartGameScreen from './screens/StartGameScreen'
-import { useFonts } from 'expo-font'
-import * as SplashScreen from 'expo-splash-screen'
+import { StatusBar } from 'expo-status-bar'
 
 export default function App() {
 	const [userNumber, setUserNumber] = useState()
@@ -49,21 +50,24 @@ export default function App() {
 	}
 
 	return (
-		<LinearGradient
-			colors={['#ff4653', '#2A9D8F']}
-			style={styles.rootScreen}
-		>
-			<ImageBackground
-				source={require('./assets/images/game_intro_background.jpg')}
-				resizeMode='cover'
-				imageStyle={styles.rootImageBackground}
-				style={{
-					flex: 1
-				}}
+		<>
+			<StatusBar style='inverted' />
+			<LinearGradient
+				colors={['#ff4653', '#2A9D8F']}
+				style={styles.rootScreen}
 			>
-				{screen}
-			</ImageBackground>
-		</LinearGradient>
+				<ImageBackground
+					source={require('./assets/images/game_intro_background.jpg')}
+					resizeMode='cover'
+					imageStyle={styles.rootImageBackground}
+					style={{
+						flex: 1
+					}}
+				>
+					{screen}
+				</ImageBackground>
+			</LinearGradient>
+		</>
 	)
 }
 
