@@ -4,7 +4,8 @@ import {
 	useWindowDimensions,
 	StyleSheet,
 	TextInput,
-	View
+	View,
+	KeyboardAvoidingView
 } from 'react-native'
 import Card from '../components/ui/Card'
 import InstructionText from '../components/ui/InstructionText'
