@@ -34,7 +34,7 @@ const GameOverScreen = ({ restartGame }) => {
 					source={require('../assets/images/nike.png')}
 					height={100}
 					width={100}
-					style={[styles.gameOverImage, imageStyle]}
+					style={imageStyle}
 				/>
 				{/* TODO: Some game logging */}
 				<Text style={styles.gameOverText}>
@@ -65,7 +65,6 @@ const styles = StyleSheet.create({
 		alignItems: 'center',
 		gap: 10
 	},
-	gameOverImage: {},
 	gameOverText: {
 		color: 'white',
 		fontSize: 16
