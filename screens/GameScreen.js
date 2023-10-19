@@ -1,4 +1,5 @@
-import { useState, useEffect } from 'react'
+import { Ionicons } from '@expo/vector-icons'
+import { useEffect, useState } from 'react'
 import {
 	Alert,
 	FlatList,
@@ -8,11 +9,9 @@ import {
 	View
 } from 'react-native'
 import NumberContainer from '../components/game/NumberContainer'
+import LogItems from '../components/game/logItems'
 import PrimaryButton from '../components/ui/PrimaryButton'
 import Title from '../components/ui/Title'
-import { Ionicons } from '@expo/vector-icons'
-import Colors from '../utils/colors'
-import LogItems from '../components/game/logItems'
 
 const generateNumberBetween = (min, max, exclude) => {
 	const rndNum = Math.floor(Math.random() * (max - min)) + min
