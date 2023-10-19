@@ -66,7 +66,7 @@ const StartGameScreen = ({ onPickNumber }) => {
 
 export default StartGameScreen
 
-const deviceHeight = Dimensions.get('window').height
+// const deviceHeight = Dimensions.get('window').height
 
 const styles = StyleSheet.create({
 	startGameView: {
@@ -77,7 +77,7 @@ const styles = StyleSheet.create({
 		padding: 16,
 		backgroundColor: Colors.accent500,
 		marginHorizontal: 10,
-		marginTop: deviceHeight < 380 ? 30 : 100,
+		// marginTop: 30,
 		borderRadius: 8,
 		elevation: 4,
 		shadowColor: 'black',
