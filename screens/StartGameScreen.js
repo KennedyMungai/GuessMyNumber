@@ -77,7 +77,7 @@ const styles = StyleSheet.create({
 		padding: 16,
 		backgroundColor: Colors.accent500,
 		marginHorizontal: 10,
-		marginTop: 32,
+		marginTop: deviceHeight < 380 ? 30 : 100,
 		borderRadius: 8,
 		elevation: 4,
 		shadowColor: 'black',
