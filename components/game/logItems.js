@@ -20,7 +20,7 @@ const styles = StyleSheet.create({
 		marginBottom: 3,
 		textAlign: 'center',
 		backgroundColor: Colors.primary800,
-		marginTop: 10,
+		marginTop: 2,
 		borderRadius: 8
 	},
 	mainGuessView: {
