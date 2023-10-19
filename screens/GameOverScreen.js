@@ -9,6 +9,23 @@ import Title from '../components/ui/Title'
 import PrimaryButton from '../components/ui/PrimaryButton'
 
 const GameOverScreen = ({ restartGame }) => {
+	const { width, height } = useWindowDimensions()
+
+	let imageSize = 300
+
+	if (width < 380) {
+		imageSize = 150
+	}
+
+	if (height < 400) {
+		imageSize = 80
+	}
+
+	const imageStyle = {
+		width: imageSize,
+		height: imageSize
+	}
+
 	return (
 		<View style={styles.rootGameOverView}>
 			<View style={styles.gameOverView}>
@@ -17,7 +34,7 @@ const GameOverScreen = ({ restartGame }) => {
 					source={require('../assets/images/nike.png')}
 					height={100}
 					width={100}
-					style={styles.gameOverImage}
+					style={[styles.gameOverImage, imageStyle]}
 				/>
 				{/* TODO: Some game logging */}
 				<Text style={styles.gameOverText}>
@@ -34,8 +51,6 @@ const GameOverScreen = ({ restartGame }) => {
 
 export default GameOverScreen
 
-// const deviceWidth = Dimensions.get('window').width
-
 const styles = StyleSheet.create({
 	rootGameOverView: {
 		flex: 1,
@@ -50,10 +65,7 @@ const styles = StyleSheet.create({
 		alignItems: 'center',
 		gap: 10
 	},
-	gameOverImage: {
-		// width: deviceWidth < 380 ? 150 : 300,
-		// height: deviceWidth < 380 ? 150 : 300
-	},
+	gameOverImage: {},
 	gameOverText: {
 		color: 'white',
 		fontSize: 16
