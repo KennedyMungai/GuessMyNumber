@@ -3,7 +3,8 @@ import {
 	Image,
 	StyleSheet,
 	Text,
-	useWindowDimensions
+	useWindowDimensions,
+	ScrollView
 } from 'react-native'
 import Title from '../components/ui/Title'
 import PrimaryButton from '../components/ui/PrimaryButton'
@@ -27,25 +28,29 @@ const GameOverScreen = ({ restartGame }) => {
 	}
 
 	return (
-		<View style={styles.rootGameOverView}>
-			<View style={styles.gameOverView}>
-				<Title>Game is Over</Title>
-				<Image
-					source={require('../assets/images/nike.png')}
-					height={100}
-					width={100}
-					style={imageStyle}
-				/>
-				{/* TODO: Some game logging */}
-				<Text style={styles.gameOverText}>
-					Your Phone Needed{' '}
-					<Text style={styles.highlightedText}>X</Text> rounds to
-					guess the number{' '}
-					<Text style={styles.highlightedText}>Y</Text>
-				</Text>
+		<ScrollView>
+			<View style={styles.rootGameOverView}>
+				<View style={styles.gameOverView}>
+					<Title>Game is Over</Title>
+					<Image
+						source={require('../assets/images/nike.png')}
+						height={100}
+						width={100}
+						style={imageStyle}
+					/>
+					{/* TODO: Some game logging */}
+					<Text style={styles.gameOverText}>
+						Your Phone Needed{' '}
+						<Text style={styles.highlightedText}>X</Text> rounds to
+						guess the number{' '}
+						<Text style={styles.highlightedText}>Y</Text>
+					</Text>
+				</View>
+				<PrimaryButton onPress={restartGame}>
+					Start New Game
+				</PrimaryButton>
 			</View>
-			<PrimaryButton onPress={restartGame}>Start New Game</PrimaryButton>
-		</View>
+		</ScrollView>
 	)
 }
 
