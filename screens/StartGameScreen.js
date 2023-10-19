@@ -42,8 +42,10 @@ const StartGameScreen = ({ onPickNumber }) => {
 		onPickNumber(chosenNumber)
 	}
 
+	const marginTopStyling = height < 380 ? 30 : 100
+
 	return (
-		<View style={styles.topView}>
+		<View style={[styles.topView, { marginTop: marginTopStyling }]}>
 			<Title>Guess my Number</Title>
 			<View style={styles.startGameView}>
 				<Card>
@@ -74,8 +76,6 @@ const StartGameScreen = ({ onPickNumber }) => {
 
 export default StartGameScreen
 
-// const deviceHeight = Dimensions.get('window').height
-
 const styles = StyleSheet.create({
 	startGameView: {
 		flexDirection: 'column',
@@ -85,7 +85,6 @@ const styles = StyleSheet.create({
 		padding: 16,
 		backgroundColor: Colors.accent500,
 		marginHorizontal: 10,
-		// marginTop: 30,
 		borderRadius: 8,
 		elevation: 4,
 		shadowColor: 'black',
