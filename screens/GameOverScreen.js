@@ -3,7 +3,6 @@ import {
 	Image,
 	StyleSheet,
 	Text,
-	Dimensions,
 	useWindowDimensions
 } from 'react-native'
 import Title from '../components/ui/Title'
